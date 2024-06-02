@@ -1,0 +1,194 @@
+/* General styling for the weather dashboard */
+.weather-container {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
+  backdrop-filter: blur(10px); /* Blurred background */
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.head {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.data-grid-container {
+  height: 400px;
+  width: 100%;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cell {
+  color: black;
+  font-weight: bolder;
+}
+
+.MuiDataGrid-row {
+  background-color: white;
+}
+
+/* Fade-in and fade-out animations for popup */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Popup styling */
+.dialog {
+  background: rgba(43, 49, 72, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dialog-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #fff;
+  padding: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.dialog-content {
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.dialog-content.fade-out {
+  animation: fadeOut 0.5s ease;
+}
+
+.dialog-text {
+  margin: 20px 0;
+}
+
+.weather-icon img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.weather-info {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.weather-info p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.weather-info p svg {
+  margin-right: 10px;
+  color: #feb47b;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.close-button {
+  background-color: #ff7e5f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-transform: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.close-button:hover {
+  background-color: #feb47b;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-container {
+  animation: fadeInUp 2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container input,
+  .form-container button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .weather-container h1 {
+    font-size: 24px;
+  }
+
+  .data-grid-container .MuiDataGrid-root {
+    font-size: 0.8rem;
+  }
+
+
+
+
+
+
+
+  .MuiDataGrid-root .MuiDataGrid-cell {
+    font-size: 0.8rem;
+    
+  }
+}
+
+
+
+
+
+
